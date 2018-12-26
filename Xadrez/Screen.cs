@@ -1,6 +1,7 @@
 ﻿using Board;
 using System;
 using Board.Enums;
+using Chess;
 
 namespace Xadrez
 {
@@ -26,6 +27,15 @@ namespace Xadrez
                 Console.WriteLine();
             }
             Console.WriteLine("  A B C D E F G H");
+        }
+
+        public static PositionChess ReadPositionChess()
+        {
+            string s = Console.ReadLine();
+            char column = s[0];
+            int line = int.Parse(s[1] + "");
+            return new PositionChess(column, line);
+
         }
 
         public static void PrintPart(Part part)

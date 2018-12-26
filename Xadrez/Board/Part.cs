@@ -16,5 +16,10 @@ namespace Board
             Tabuleiro = tabuleiro;
             Color = color;
         }
+
+        public void IncrementMove()
+        {
+            Moves++;
+        }
     }
 }

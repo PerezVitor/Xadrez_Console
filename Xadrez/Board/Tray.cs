@@ -41,6 +41,19 @@ namespace Board
             part.Position = position;
         }
 
+        public Part RemovePart(Position position)
+        {
+            if(Part(position) == null)
+            {
+                return null;
+            }
+
+            Part aux = Part(position);
+            aux.Position = null;
+            Parts[position.Line, position.Column] = null;
+            return aux;
+        }
+
         public bool PositionValidate(Position position)
         {
             if(position.Line < 0 || 

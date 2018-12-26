@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Board\Exceptions\TrayExceptions.cs" />
     <Compile Include="Chess\Bishop.cs" />
+    <Compile Include="Chess\ChessGame.cs" />
     <Compile Include="Chess\Horse.cs" />
     <Compile Include="Chess\King.cs" />
     <Compile Include="Chess\Peon.cs" />

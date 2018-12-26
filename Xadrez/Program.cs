@@ -16,14 +16,21 @@ namespace Xadrez
         {
             try
             {
-                Tray tray = new Tray(8, 8);
+                ChessGame game = new ChessGame();
 
-                tray.PutPart(new Tower(tray, Color.Black), new Position(0, 0));
-                tray.PutPart(new Tower(tray, Color.Black), new Position(0, 7));
-                tray.PutPart(new King(tray, Color.White), new Position(0, 4));
-                tray.PutPart(new Queen(tray, Color.White), new Position(0, 3));
+                while(!game.GameFinished)
+                {
+                    Console.Clear();
+                    Screen.PrintBoard(game.Tray);
 
-                Screen.PrintBoard(tray);
+                    Console.Write("\nOrigin: ");
+                    Position origin = Screen.ReadPositionChess().ToPosition();
+                    Console.Write("Destiny: ");
+                    Position destiny = Screen.ReadPositionChess().ToPosition();
+
+                    game.PerformsMotion(origin, destiny);
+                }
+                
             }
             catch(TrayExceptions e)
             {
