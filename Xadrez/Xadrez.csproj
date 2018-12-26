@@ -44,7 +44,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tabuleiro\Posicao.cs" />
+    <Compile Include="Board\Enums\Color.cs" />
+    <Compile Include="Board\Part.cs" />
+    <Compile Include="Board\Posicao.cs" />
+    <Compile Include="Board\Tray.cs" />
+    <Compile Include="Screen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
