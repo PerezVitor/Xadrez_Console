@@ -6,14 +6,15 @@ namespace Board
     {
         public Position Position { get; set; }
         public Color Color { get; protected set; }
-        public int Moves { get; set; }
-        public Tray Tabuleiro { get; set; }
+        public int Moves { get; protected set; }
+        public Tray Tabuleiro { get; protected set; }
 
-        public Part(Position position, int moves, Tray tabuleiro)
+        public Part(Tray tabuleiro, Color color)
         {
-            Position = position;
-            Moves = moves;
+            Position = null;
+            Moves = 0;
             Tabuleiro = tabuleiro;
+            Color = color;
         }
     }
 }
