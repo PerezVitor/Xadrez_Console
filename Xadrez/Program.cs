@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Board;
 using Board.Enums;
 using Chess;
+using Board.Exceptions;
 
 namespace Xadrez
 {
@@ -13,11 +14,21 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
-            Tray tray = new Tray(8, 8);
+            try
+            {
+                Tray tray = new Tray(8, 8);
 
-            tray.PutPart(new Tower(tray, Color.Black), new Position(0, 0));
-            Screen.PrintBoard(tray);
+                tray.PutPart(new Tower(tray, Color.Black), new Position(0, 0));
+                tray.PutPart(new Tower(tray, Color.Black), new Position(0, 7));
+                tray.PutPart(new King(tray, Color.Black), new Position(0, 4));
+                tray.PutPart(new Queen(tray, Color.Black), new Position(0, 3));
 
+                Screen.PrintBoard(tray);
+            }
+            catch(TrayExceptions e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
         }
     }
