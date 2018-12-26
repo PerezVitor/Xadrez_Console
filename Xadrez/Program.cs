@@ -14,26 +14,26 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
-            /*try
+            try
             {
                 Tray tray = new Tray(8, 8);
 
                 tray.PutPart(new Tower(tray, Color.Black), new Position(0, 0));
                 tray.PutPart(new Tower(tray, Color.Black), new Position(0, 7));
-                tray.PutPart(new King(tray, Color.Black), new Position(0, 4));
-                tray.PutPart(new Queen(tray, Color.Black), new Position(0, 3));
+                tray.PutPart(new King(tray, Color.White), new Position(0, 4));
+                tray.PutPart(new Queen(tray, Color.White), new Position(0, 3));
 
                 Screen.PrintBoard(tray);
             }
             catch(TrayExceptions e)
             {
                 Console.WriteLine(e.Message);
-            }*/
+            }
 
-            PositionChess position = new PositionChess('c', 7);
+            /*PositionChess position = new PositionChess('c', 7);
 
             Console.WriteLine(position);
-            Console.WriteLine(position.ToPosition());
+            Console.WriteLine(position.ToPosition());*/
         }
     }
 }
