@@ -47,6 +47,7 @@
     <Compile Include="Chess\Horse.cs" />
     <Compile Include="Chess\King.cs" />
     <Compile Include="Chess\Peon.cs" />
+    <Compile Include="Chess\PositionChess.cs" />
     <Compile Include="Chess\Quenn.cs" />
     <Compile Include="Chess\Tower.cs" />
     <Compile Include="Program.cs" />

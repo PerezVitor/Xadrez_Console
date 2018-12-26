@@ -14,7 +14,7 @@ namespace Xadrez
     {
         static void Main(string[] args)
         {
-            try
+            /*try
             {
                 Tray tray = new Tray(8, 8);
 
@@ -28,8 +28,12 @@ namespace Xadrez
             catch(TrayExceptions e)
             {
                 Console.WriteLine(e.Message);
-            }
+            }*/
 
+            PositionChess position = new PositionChess('c', 7);
+
+            Console.WriteLine(position);
+            Console.WriteLine(position.ToPosition());
         }
     }
 }
