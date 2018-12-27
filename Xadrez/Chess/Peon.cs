@@ -3,7 +3,7 @@ using Board.Enums;
 
 namespace Chess
 {
-    class Peon : Part
+    /*class Peon : Part
     {
         public Peon(Tray tray, Color color) : base(tray, color)
         {
@@ -13,5 +13,5 @@ namespace Chess
         {
             return "P";
         }
-    }
+    }*/
 }

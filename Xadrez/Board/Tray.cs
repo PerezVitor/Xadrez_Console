@@ -6,7 +6,7 @@ namespace Board
     {
         public int Lines { get; set; }
         public int Columns { get; set; }
-        private Part[,] Parts { get; set; }
+        public Part[,] Parts { get; set; }
 
         public Tray(int lines, int columns)
         {

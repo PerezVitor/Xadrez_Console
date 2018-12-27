@@ -1,7 +1,7 @@
 ﻿using Board;
 using Board.Enums;
 
-namespace Chess
+/*namespace Chess
 {
     class Bishop : Part
     {
@@ -14,4 +14,4 @@ namespace Chess
             return "B";
         }
     }
-}
+}*/

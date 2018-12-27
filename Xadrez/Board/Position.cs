@@ -11,6 +11,12 @@
             Column = column;
         }
 
+        public void DefineValue(int line, int column)
+        {
+            Line = line;
+            Column = column;
+        }
+
         public override string ToString()
         {
             return "" + Line + ", "+ Column;

@@ -2,18 +2,18 @@
 
 namespace Board
 {
-    class Part
+    abstract  class Part
     {
         public Position Position { get; set; }
         public Color Color { get; protected set; }
         public int Moves { get; protected set; }
-        public Tray Tabuleiro { get; protected set; }
+        public Tray Tray { get; protected set; }
 
-        public Part(Tray tabuleiro, Color color)
+        public Part(Tray tray, Color color)
         {
             Position = null;
             Moves = 0;
-            Tabuleiro = tabuleiro;
+            Tray = tray;
             Color = color;
         }
 
@@ -21,5 +21,7 @@ namespace Board
         {
             Moves++;
         }
+
+        public abstract bool[,] PossibleMoves();
     }
 }

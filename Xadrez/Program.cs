@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Board;
 using Board.Enums;
 using Chess;
@@ -25,6 +21,12 @@ namespace Xadrez
 
                     Console.Write("\nOrigin: ");
                     Position origin = Screen.ReadPositionChess().ToPosition();
+
+                    bool[,] possiblePositions = game.Tray.Part(origin).PossibleMoves();
+
+                    Console.Clear();
+                    Screen.PrintBoard(game.Tray, possiblePositions);
+
                     Console.Write("Destiny: ");
                     Position destiny = Screen.ReadPositionChess().ToPosition();
 
